@@ -8,7 +8,7 @@ using namespace std;
 class Solution {
 public:
     int myAtoi(string s) {
-        unsigned int temp = 0;
+        unsigned int temp = 0; // key part
         s = removeLeadingWhiteSpace(s);
         bool negative = isNegative(s);
         if(s[0] == '-' || s[0] == '+'){
