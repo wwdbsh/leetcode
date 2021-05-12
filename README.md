@@ -4,7 +4,7 @@ Solving Algorithm Problems from [LeetCode](https://leetcode.com/)
 
 | #  |    Category    | Solved |
 |:--:|:---------------|-------:|
-| 01 |      easy      |   0   |
+| 01 |      easy      |   1   |
 | 02 |     medium     |   0   |
 | 03 |      hard      |   0   |
-| 04 |    facebook    |   2   |
+| 04 |    facebook    |   4   |
