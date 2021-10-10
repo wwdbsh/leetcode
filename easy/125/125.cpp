@@ -5,22 +5,19 @@ using namespace std;
 class Solution {
 public:
     bool isPalindrome(string s) {
-        string ss;
-        for(int i = 0; i < s.length(); i++){
-            char c = s[i];
-            if(c >= 97 && c <= 122){
-                ss += c;
-            }else if(c >= 65 && c <= 90){
-                ss += tolower(c);
-            }else if(c >= 48 && c <= 57){
-                ss += c;
-            }
-        }
-        for(int left = 0, right = ss.length()-1; left <= right; left++, right--){
-            if(ss[left] != ss[right]){
-                return false;
-            }
+        for(int l = 0, r = s.length()-1; l <= r; l++, r--){
+            while(l < r && !isLetter(s, l)) l++;
+            while(l < r && !isLetter(s, r)) r--;
+            if(tolower(s[l]) != tolower(s[r])) return false;
         }
         return true;
+    }
+private:
+    bool isLetter(string s, int index){
+        return (
+            (s[index] >= 'a' && s[index] <= 'z') ||
+            (s[index] >= 'A' && s[index] <= 'Z' ) ||
+            (s[index] >= '0' && s[index] <= '9')
+        );
     }
 };
