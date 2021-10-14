@@ -1,14 +1,15 @@
-#include <iostream>
-#include <sstream>
 #define LOWER -2147483648
 #define UPPER 2147483647
+
+#include <iostream>
+#include <sstream>
 
 using namespace std;
 
 class Solution {
 public:
     int myAtoi(string s) {
-        unsigned int temp = 0; // key part
+        unsigned int temp = 0;
         s = removeLeadingWhiteSpace(s);
         bool negative = isNegative(s);
         if(s[0] == '-' || s[0] == '+'){
@@ -19,17 +20,9 @@ public:
         ss >> temp;
         int ans = 0;
         if(negative){
-            if(temp > UPPER){
-                ans = LOWER;
-            }else{
-                ans = temp*-1;
-            }
+            ans = temp > UPPER ? LOWER : temp*-1;
         }else{
-            if(temp > UPPER){
-                ans = UPPER;
-            }else{
-                ans = temp;
-            }
+            ans = temp > UPPER ? UPPER : temp;
         }
         return ans;
     }
@@ -61,10 +54,3 @@ private:
         return rt;
     }
 };
-
-int main(void){
-    Solution sol;
-    string s;
-    cin >> s;
-    cout << sol.myAtoi(s) << "\n";
-}
