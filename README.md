@@ -10,6 +10,6 @@ Solving Algorithm Problems from [LeetCode](https://leetcode.com/)
 | 04 |    facebook    |   17   |
 | 05 |     apple      |   3    |
 | 06 |    microsoft   |   2    |
-| 07 |     google     |   1    |
+| 07 |     google     |   2    |
 | 08 |     amazon     |   2    |
 | 09 |      uber      |   1    |
